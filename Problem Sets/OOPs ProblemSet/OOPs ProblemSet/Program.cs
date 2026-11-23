@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("                 * Problem 1 : Book Class *\n"); 
+            Console.WriteLine("                 * Problem 1 : Book Class *\n");
 
             Book B1 = new Book { Title = "The Great Gatsby", Author = "F. Scott Fitzgerald", Price = 1000 };
             Book B2 = new Book { Title = "To Kill a Mockingbird", Author = "Harper Lee", Price = 1500 };
 
             Console.WriteLine($" * Book 1 -> Title = {B1.Title} Author = {B1.Author} Price = Rs{B1.Price}\n");
-           // Console.WriteLine("\n---------------------------------------------------------------------------------\n");
+            // Console.WriteLine("\n---------------------------------------------------------------------------------\n");
             Console.WriteLine($" * Book 2 -> Title = {B2.Title} Author = {B2.Author} Price = Rs{B2.Price}");
 
             Console.WriteLine("\n\n                 * Problem 2 : Employee Class *\n");
@@ -23,12 +23,14 @@
             Console.WriteLine($" * Employee ID : {E2.Id}, Employee Name : {E2.Name}, Employee Salary = {E2.Salary} \n");
             Console.WriteLine($" * Employee ID : {E3.Id}, Employee Name : {E3.Name}, Employee Salary = {E3.Salary} \n");
 
-            Console.WriteLine("\n\n                 * Rectangle Details *\n");
+            Console.WriteLine("\n\n                 * Problem 3 : Rectangle Class *\n");
 
             Rectangle R1 = new Rectangle();
 
             Console.Write($"* Enter Length Of The Rectangle : ");
             R1.Length = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
 
             Console.Write($"* Enter Width Of The Rectangle : ");
             R1.Width = Convert.ToInt32(Console.ReadLine());
@@ -36,6 +38,70 @@
             Console.WriteLine();
 
             Console.WriteLine(R1.GetDetails());
+
+
+            Console.WriteLine("\n\n                * Problem 4 : Bank Account Class *\n");
+
+            BankAccount BA1 = new BankAccount { AccountBalance = 5000, AccountHolderName = "Balraj", AccountNumber = 1234567890 };
+
+            Console.WriteLine(BA1.GetAccountDetails());
+
+
+            Console.WriteLine("\n\n                 * Problem 4 : Product Class *\n");
+
+            Product[] p = new Product[5];
+
+            p[0] = new Product("Laptop", 1000);
+            p[1] = new Product("Mobile", 1500);
+            p[2] = new Product("Tablet", 2000);
+            p[3] = new Product("Headphones", 500);
+            p[4] = new Product("Smartwatch", 800);
+
+            Console.WriteLine(" * Product Details : \n");
+
+            foreach (Product p1 in p)
+            {
+                Console.WriteLine($" * Product Name : {p1.ProductName}, Product Price : Rs {p1.Price}.00\n");
+            }
+
+            Console.WriteLine("\n\n * Products with Price Greater than Rs1000 : \n");
+            int TargetPrice = 1000;
+            for (int i = 0; i < p.Length; i++)
+            {
+                if (p[i].Price > TargetPrice)
+                {
+                    Console.WriteLine($" * Product Name : {p[i].ProductName}, Product Price : Rs s{p[i].Price}.00 \n");
+                }
+            }
+
+
+
+            Console.WriteLine("\n\n                 * Problem 5 : Student Class *\n");
+
+
+            Student s = new Student("Balraj", 1, 35.5f);
+            Student s1 = new Student("Mohit", 2, 99.5f);
+            Student s2 = new Student("Rupesh", 3, 98.5f);
+
+            Console.WriteLine("                     * Students details \n\n*");
+
+            Console.WriteLine($"{s.GetDetails()}{s1.GetDetails()}{s2.GetDetails()}");
+
+            Console.WriteLine("                     * Students Grade *\n\n");
+
+            Console.WriteLine($"{s.GetGrade()}{s1.GetGrade()}{s2.GetGrade()}");
+
+
+
+            Console.WriteLine("\n\n                 * Problem 6 : Laptop Class *\n");
+
+            Laptop L1 = new Laptop();
+
+            Console.WriteLine($"Laptop Brand : {L1.Brand} | Laptop Name : {L1.Name}");
+
+
+
+
 
 
 

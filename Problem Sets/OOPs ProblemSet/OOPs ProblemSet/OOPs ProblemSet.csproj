@@ -6,6 +6,7 @@
     <RootNamespace>OOPs_ProblemSet</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>OOPs_ProblemSet.NInteger</StartupObject>
   </PropertyGroup>
 
 </Project>
